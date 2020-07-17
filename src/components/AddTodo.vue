@@ -8,7 +8,7 @@
 </template>
 
 <script>
-import { uuid } from "vue-uuid";
+//import { uuid } from "vue-uuid";
 
 export default {
     name: "AddTodo",
@@ -21,12 +21,12 @@ export default {
         addTodo (e) {
             e.preventDefault();
             const newTodo = {
-                id: uuid.v4(),
                 title: this.title,
                 completed: false
             }
             
             this.$emit('add-todo', newTodo);
+            this.title = '';
         }
     }
 }
